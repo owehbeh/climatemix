@@ -1,0 +1,2308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Mix</title>
+
+ <!--  Mobile Viewport Fix
+  j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+  device-width : Occupy full width of the screen in its current orientation
+  initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+  maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Zetta Menu CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/zetta.menu.css"
+  />
+  <!-- /Zetta Menu CSS -->
+  
+  
+    <!-- load fonts from google -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700%7CRoboto:400,500,700%7CRoboto+Condensed%7CLato:400,700" rel="stylesheet" type="text/css">
+
+    <!-- load css for cubeportfolio -->
+    <link rel="stylesheet" type="text/css" href="css/loadingbar.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body style="width: 98%; margin: 8px auto; overflow-y: scroll;">
+<!-- Zetta Menu -->
+  <nav class="zetta-menu1 zm-css">
+    <input type="checkbox" id="zm-switchzetta-menu1" />
+    <ul onclick="">
+      <li class=" zm-img">
+        <a href="https://owebapp.com">
+          <img title="zettaMenu logo image" src="img/logo.png">
+        </a>
+      </li>
+      <li><a><i class="zm-icon fa fa-heart"></i>Our Playlist</a>
+        <div>
+          <ul>
+            <li><a><i class="zm-icon fa fa-leaf"></i>Just Nature</a>
+              <div>
+                <ul>
+                  <li><a href="javascript:void(0);" id="CampingPlaylist">Camping</a>
+                  </li>
+                  <li><a href="javascript:void(0);" id="GoingOutPlaylist">Going Out</a>
+                  </li>
+                  <li><a href="javascript:void(0);" id="CatAtTheBeachPlaylist">Cat At The Beach</a>
+                  </li>
+                  <li><a href="javascript:void(0);" id="ThunderStormPlaylist">Thunder Storm</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a><i class="zm-icon fa fa-umbrella"></i>Sad</a>
+              <div>
+                <ul>
+                  <li><a href="javascript:void(0);" id="LockedInsidePlaylist">Locked Inside</a>
+                  </li>
+                  <li><a href="javascript:void(0);" id="LostAFriendPlaylist">Lost A Friend</a>
+                  </li>
+                  <li><a href="javascript:void(0);" id="MissYouPlaylist">Miss You</a>
+                  </li>
+                  <li><a href="javascript:void(0);" id="LonelyPlaylist">Lonely</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a><i class="zm-icon fa fa-users"></i>People</a>
+              <div>
+                <ul>
+                  <li><a href="javascript:void(0);" id="GameTimePlaylist">GAME TIME</a>
+                  </li>
+                  <li><a href="javascript:void(0);" id="HistoryMadePlaylist">History Made</a>
+                  </li>
+                  <li><a href="javascript:void(0);" id="">New Item</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="javascript:void(0);" id="StopAllPlaying"><i class="zm-icon fa fa-stop"  ></i>Stop All</a>
+      </li>
+      <li><a href="#"><i class="zm-icon fa fa-codepen"></i>Other Tools</a>
+        <div style="width:250px;">
+          <ul>
+            <li><a href="https://qr.owebapp.com"><i class="zm-icon fa fa-qrcode"></i>QR Code Generator</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="zm-switch">
+        <a>
+          <label for="zm-switchzetta-menu1"><i class="fa fa-bars"></i>
+          </label>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <br><br>
+  <!-- /Zetta Menu -->
+
+    <!-- juicy-projects -->
+    <div id="js-filters-juicy-projects" class="cbp-l-filters-button">
+        <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+            All <div class="cbp-filter-counter"></div>
+        </div>
+        <div data-filter=".nature" class="cbp-filter-item">
+            Nature <div class="cbp-filter-counter"></div>
+        </div>
+        <div data-filter=".animals" class="cbp-filter-item">
+            Animals <div class="cbp-filter-counter"></div>
+        </div>
+        <div data-filter=".people" class="cbp-filter-item">
+            People <div class="cbp-filter-counter"></div>
+        </div>
+        <div data-filter=".music" class="cbp-filter-item">
+            Music <div class="cbp-filter-counter"></div>
+        </div>
+		<div data-filter=".other" class="cbp-filter-item">
+            Other <div class="cbp-filter-counter"></div>
+        </div>
+		<div data-filter=".nowPlaying" class="cbp-filter-item">
+            Now Playing <div class="cbp-filter-counter"></div>
+        </div>
+    </div>
+
+    <div id="js-grid-juicy-projects" class="cbp">
+        <div class="cbp-item nature" id="Creek">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Creek.jpg" alt="">
+					<div id="CreekProgressBar" class="progress-bar blue stripes"> <span id="CreekProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="CreekVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="CreekPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="CreekVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Creek</div>
+            <div class="cbp-l-grid-projects-desc">Taking a bath in the creek is different <br>. </div>
+        </div>
+		
+		<div class="cbp-item nature" id="Beach">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Beach.jpg" alt="">
+					<div id="BeachProgressBar" class="progress-bar blue stripes"> <span id="BeachProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="BeachVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="BeachPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="BeachVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Beach</div>
+            <div class="cbp-l-grid-projects-desc">Don't forget how much you love the beach <br>. </div>
+        </div>
+		
+		<div class="cbp-item nature" id="Fire">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Fire.jpg" alt="">
+					<div id="FireProgressBar" class="progress-bar blue stripes"> <span id="FireProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="FireVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="FirePlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="FireVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Fire</div>
+            <div class="cbp-l-grid-projects-desc">What matters most is how well you walk through the fire <br>. </div>
+        </div>
+		
+		<div class="cbp-item nature" id="Forest">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Forest.jpg" alt="">
+					<div id="ForestProgressBar" class="progress-bar blue stripes"> <span id="ForestProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="ForestVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="ForestPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="ForestVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Forest</div>
+            <div class="cbp-l-grid-projects-desc">A forest bird never wants a cage <br>. </div>
+        </div>
+		
+		<div class="cbp-item nature" id="ForestNight">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/ForestNight.jpg" alt="">
+					<div id="ForestNightProgressBar" class="progress-bar blue stripes"> <span id="ForestNightProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="ForestNightVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="ForestNightPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="ForestNightVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Forest Night</div>
+            <div class="cbp-l-grid-projects-desc">The clearest way into the Universe is through a forest wilderness</div>
+        </div>
+		
+		<div class="cbp-item nature" id="Fountain">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Fountain.jpg" alt="">
+					<div id="FountainProgressBar" class="progress-bar blue stripes"> <span id="FountainProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="FountainVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="FountainPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="FountainVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Fountain</div>
+            <div class="cbp-l-grid-projects-desc">To find joy in work is to discover the fountain of youth <br>. </div>
+        </div>
+		
+		<div class="cbp-item nature" id="Rain">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Rain.jpg" alt="">
+					<div id="RainProgressBar" class="progress-bar blue stripes"> <span id="RainProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="RainVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="RainPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="RainVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Rain</div>
+            <div class="cbp-l-grid-projects-desc">Some people walk in the rain, others just get wet <br>. </div>
+        </div>
+		
+		<div class="cbp-item nature" id="HeavyRain">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/HeavyRain.jpg" alt="">
+					<div id="HeavyRainProgressBar" class="progress-bar blue stripes"> <span id="HeavyRainProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="HeavyRainVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="HeavyRainPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="HeavyRainVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Heavy Rain</div>
+            <div class="cbp-l-grid-projects-desc">And when it rains on your parade, look up rather than down. Without the rain, there would be no rainbow</div>
+        </div>
+		
+		<div class="cbp-item nature" id="Thunder">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Thunder.jpg" alt="">
+					<div id="ThunderProgressBar" class="progress-bar blue stripes"> <span id="ThunderProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="ThunderVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="ThunderPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="ThunderVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Thunder</div>
+            <div class="cbp-l-grid-projects-desc">I go where the sound of thunder is <br>. </div>
+        </div>
+		
+		<div class="cbp-item nature" id="HowlingWind">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/HowlingWind.jpg" alt="">
+					<div id="HowlingWindProgressBar" class="progress-bar blue stripes"> <span id="HowlingWindProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="HowlingWindVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="HowlingWindPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="HowlingWindVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Howling Wind</div>
+            <div class="cbp-l-grid-projects-desc">Who am I to blow against the wind? <br>. 	</div>
+        </div>
+		
+		<div class="cbp-item people" id="Airport">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Airport.jpg" alt="">
+					<div id="AirportProgressBar" class="progress-bar blue stripes"> <span id="AirportProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="AirportVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="AirportPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="AirportVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Airport</div>
+            <div class="cbp-l-grid-projects-desc">Being stuck in airports, you always end up buying perfume and sunglasses</div>
+        </div>
+		
+		<div class="cbp-item people" id="Bank">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Bank.jpg" alt="">
+					<div id="BankProgressBar" class="progress-bar blue stripes"> <span id="BankProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="BankVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="BankPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="BankVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Bank</div>
+            <div class="cbp-l-grid-projects-desc">If nature were a bank, they would have already rescued it <br>. </div>
+        </div>
+		
+		<div class="cbp-item people" id="BaseballStadium">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/BaseballStadium.jpg" alt="">
+					<div id="BaseballStadiumProgressBar" class="progress-bar blue stripes"> <span id="BaseballStadiumProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="BaseballStadiumVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="BaseballStadiumPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="BaseballStadiumVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Baseball Stadium</div>
+            <div class="cbp-l-grid-projects-desc">Love is the most important thing, but baseball is pretty good, too</div>
+        </div>
+		
+		<div class="cbp-item other" id="Battle">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Battle.jpg" alt="">
+					<div id="BattleProgressBar" class="progress-bar blue stripes"> <span id="BattleProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="BattleVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="BattlePlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="BattleVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Battle</div>
+            <div class="cbp-l-grid-projects-desc">Sometimes by losing a battle you find a new way to win the war</div>
+        </div>
+		
+		<div class="cbp-item animals" id="CatPurr">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/CatPurr.jpg" alt="">
+					<div id="CatPurrProgressBar" class="progress-bar blue stripes"> <span id="CatPurrProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="CatPurrVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="CatPurrPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="CatPurrVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Cat Purr</div>
+            <div class="cbp-l-grid-projects-desc">A black cat crossing your path signifies that the animal is going somewhere</div>
+        </div>
+		
+		<div class="cbp-item people" id="CoffeeShop">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/CoffeeShop.jpg" alt="">
+					<div id="CoffeeShopProgressBar" class="progress-bar blue stripes"> <span id="CoffeeShopProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="CoffeeShopVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="CoffeeShopPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="CoffeeShopVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Coffee Shop</div>
+            <div class="cbp-l-grid-projects-desc">I love going to coffee shops and just sitting and listening <br>. </div>
+        </div>
+		
+		<div class="cbp-item other" id="Construction">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Construction.jpg" alt="">
+					<div id="ConstructionProgressBar" class="progress-bar blue stripes"> <span id="ConstructionProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="ConstructionVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="ConstructionPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="ConstructionVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Construction</div>
+            <div class="cbp-l-grid-projects-desc">The road to success is always under construction <br>. </div>
+        </div>
+		
+		<div class="cbp-item animals" id="Dog">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Dog.jpg" alt="">
+					<div id="DogProgressBar" class="progress-bar blue stripes"> <span id="DogProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="DogVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="DogPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="DogVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Dog</div>
+            <div class="cbp-l-grid-projects-desc">Money can buy you a fine dog, but only love can make him wag his tail</div>
+        </div>
+		
+		<div class="cbp-item animals" id="Elephant">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Elephant.jpg" alt="">
+					<div id="ElephantProgressBar" class="progress-bar blue stripes"> <span id="ElephantProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="ElephantVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="ElephantPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="ElephantVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Elephant</div>
+            <div class="cbp-l-grid-projects-desc">The only harmless great thing <br>. </div>
+        </div>
+		
+		<div class="cbp-item music" id="HorrorMusic1">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/HorrorMusic1.jpg" alt="">
+					<div id="HorrorMusic1ProgressBar" class="progress-bar blue stripes"> <span id="HorrorMusic1Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="HorrorMusic1VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="HorrorMusic1Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="HorrorMusic1VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Horror Music 1</div>
+            <div class="cbp-l-grid-projects-desc">Art in Nature is rhythmic and has a horror of constraint <br>. </div>
+        </div>
+		
+		<div class="cbp-item music" id="HorrorMusic2">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/HorrorMusic2.jpg" alt="">
+					<div id="HorrorMusic2ProgressBar" class="progress-bar blue stripes"> <span id="HorrorMusic2Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="HorrorMusic2VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="HorrorMusic2Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="HorrorMusic2VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Horror Music 2</div>
+            <div class="cbp-l-grid-projects-desc">I'm terrible at horror movies, by the way. I get scared so easily</div>
+        </div>
+		
+		<div class="cbp-item music" id="HorrorMusic3">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/HorrorMusic3.jpg" alt="">
+					<div id="HorrorMusic3ProgressBar" class="progress-bar blue stripes"> <span id="HorrorMusic3Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="HorrorMusic3VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="HorrorMusic3Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="HorrorMusic3VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Horror Music 3</div>
+            <div class="cbp-l-grid-projects-desc">Poor decisions and bad luck are contingencies of most horror films</div>
+        </div>
+		
+		<div class="cbp-item music" id="Jazz1">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Jazz1.jpg" alt="">
+					<div id="Jazz1ProgressBar" class="progress-bar blue stripes"> <span id="Jazz1Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="Jazz1VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="Jazz1Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="Jazz1VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Jazz 1</div>
+            <div class="cbp-l-grid-projects-desc">One chord is fine. Two chords are pushing it. Three chords and you're into jazz</div>
+        </div>
+		
+		<div class="cbp-item music" id="Jazz2">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Jazz2.jpg" alt="">
+					<div id="Jazz2ProgressBar" class="progress-bar blue stripes"> <span id="Jazz2Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="Jazz2VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="Jazz2Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="Jazz2VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Jazz 2</div>
+            <div class="cbp-l-grid-projects-desc">What I'm doing, I prefer to call that jazz, because it is a beautiful word - I love it</div>
+        </div>
+		
+		<div class="cbp-item music" id="Jazz3">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Jazz3.jpg" alt="">
+					<div id="Jazz3ProgressBar" class="progress-bar blue stripes"> <span id="Jazz3Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="Jazz3VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="Jazz3Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="Jazz3VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Jazz 3</div>
+            <div class="cbp-l-grid-projects-desc">I still love the whole history of jazz. The old things sound better than ever</div>
+        </div>
+		
+		<div class="cbp-item animals" id="Lion">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Lion.jpg" alt="">
+					<div id="LionProgressBar" class="progress-bar blue stripes"> <span id="LionProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="LionVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="LionPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="LionVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Lion</div>
+            <div class="cbp-l-grid-projects-desc">A lion is called a 'king of beasts' obviously for a reason <br>. </div>
+        </div>
+		
+		<div class="cbp-item people" id="Mall">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Mall.jpg" alt="">
+					<div id="MallProgressBar" class="progress-bar blue stripes"> <span id="MallProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="MallVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="MallPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="MallVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Mall</div>
+            <div class="cbp-l-grid-projects-desc">Show me a mall, and I'm happy <br>. </div>
+        </div>
+		
+		<div class="cbp-item music" id="MoviesMusic1">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/MoviesMusic1.jpg" alt="">
+					<div id="MoviesMusic1ProgressBar" class="progress-bar blue stripes"> <span id="MoviesMusic1Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="MoviesMusic1VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="MoviesMusic1Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="MoviesMusic1VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Movies Music 1</div>
+            <div class="cbp-l-grid-projects-desc">We all need illusions. That's why we love movies <br>. </div>
+        </div>
+		
+		<div class="cbp-item music" id="MoviesMusic2">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/MoviesMusic2.jpg" alt="">
+					<div id="MoviesMusic2ProgressBar" class="progress-bar blue stripes"> <span id="MoviesMusic2Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="MoviesMusic2VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="MoviesMusic2Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="MoviesMusic2VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Movies Music 2</div>
+            <div class="cbp-l-grid-projects-desc">If the boy and girl walk off into the sunset hand-in-hand in the last scene, it adds 10 million to the box office</div>
+        </div>
+		
+		<div class="cbp-item music" id="MoviesMusic3">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/MoviesMusic3.jpg" alt="">
+					<div id="MoviesMusic3ProgressBar" class="progress-bar blue stripes"> <span id="MoviesMusic3Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="MoviesMusic3VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="MoviesMusic3Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="MoviesMusic3VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Movies Music 3</div>
+            <div class="cbp-l-grid-projects-desc">A story should have a beginning, a middle and an end, but not necessarily in that order</div>
+        </div>
+		
+		<div class="cbp-item music" id="PeacefulMusic">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/PeacefulMusic.jpg" alt="">
+					<div id="PeacefulMusicProgressBar" class="progress-bar blue stripes"> <span id="PeacefulMusicProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="PeacefulMusicVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="PeacefulMusicPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="PeacefulMusicVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Peaceful Music</div>
+            <div class="cbp-l-grid-projects-desc">Be at war with your vices, at peace with your neighbors, and let every new year find you a better man</div>
+        </div>
+		
+		<div class="cbp-item other" id="RoadWorks">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/RoadWorks.jpg" alt="">
+					<div id="RoadWorksProgressBar" class="progress-bar blue stripes"> <span id="RoadWorksProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="RoadWorksVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="RoadWorksPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="RoadWorksVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Road Works</div>
+            <div class="cbp-l-grid-projects-desc">Your goals are the road maps that guide you and show you what is possible for your life</div>
+        </div>
+		
+		<div class="cbp-item people" id="SoccerStadium">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/SoccerStadium.jpg" alt="">
+					<div id="SoccerStadiumProgressBar" class="progress-bar blue stripes"> <span id="SoccerStadiumProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="SoccerStadiumVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="SoccerStadiumPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="SoccerStadiumVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Soccer Stadium</div>
+            <div class="cbp-l-grid-projects-desc">Soccer is a magical game <br>. </div>
+        </div>
+		
+		<div class="cbp-item other" id="Street">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Street.jpg" alt="">
+					<div id="StreetProgressBar" class="progress-bar blue stripes"> <span id="StreetProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="StreetVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="StreetPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="StreetVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Street</div>
+            <div class="cbp-l-grid-projects-desc">I love the idea of the street vibe, having folks together, out in the street</div>
+        </div>
+		
+		<div class="cbp-item music" id="TitanicMusic">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/TitanicMusic.jpg" alt="">
+					<div id="TitanicMusicProgressBar" class="progress-bar blue stripes"> <span id="TitanicMusicProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="TitanicMusicVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="TitanicMusicPlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="TitanicMusicVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Titanic Music</div>
+            <div class="cbp-l-grid-projects-desc">I actually cried during 'Titanic'. It was one of the few movies I've seen in the theater multiple times</div>
+        </div>
+		
+		<div class="cbp-item music" id="Violin1">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Violin1.jpg" alt="">
+					<div id="Violin1ProgressBar" class="progress-bar blue stripes"> <span id="Violin1Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="Violin1VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="Violin1Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="Violin1VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Violin 1</div>
+            <div class="cbp-l-grid-projects-desc">When you play a violin piece, you are a storyteller, and you're telling a story</div>
+        </div>
+		
+		<div class="cbp-item music" id="Violin2">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Violin2.jpg" alt="">
+					<div id="Violin2ProgressBar" class="progress-bar blue stripes"> <span id="Violin2Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="Violin2VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="Violin2Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="Violin2VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Violin 2</div>
+            <div class="cbp-l-grid-projects-desc">A table, a chair, a bowl of fruit and a violin; what else does a man need to be happy?</div>
+        </div>
+		
+		<div class="cbp-item music" id="Violin3">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Violin3.jpg" alt="">
+					<div id="Violin3ProgressBar" class="progress-bar blue stripes"> <span id="Violin3Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="Violin3VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="Violin3Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="Violin3VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Violin 3</div>
+            <div class="cbp-l-grid-projects-desc">Happiness is a thing to be practiced, like the violin <br>. </div>
+        </div>
+		
+		<div class="cbp-item music" id="Violin4">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Violin4.jpg" alt="">
+					<div id="Violin4ProgressBar" class="progress-bar blue stripes"> <span id="Violin4Progress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="Violin4VolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="Violin4Play" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="Violin4VolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Violin 4</div>
+            <div class="cbp-l-grid-projects-desc">Violin playing is a physical art with great traditions behind it</div>
+        </div>
+		
+		<div class="cbp-item other" id="Warfare">
+            <div class="cbp-caption">
+                <div class="cbp-caption-defaultWrap">
+                    <img src="img/Warfare.jpg" alt="">
+					<div id="WarfareProgressBar" class="progress-bar blue stripes"> <span id="WarfareProgress" style="width: 20%"></span> </div>
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignCenter">
+                        <div class="cbp-l-caption-body">
+                            <a href="javascript:void(0);" id="WarfareVolDown" class="cbp-l-caption-buttonLeft" rel="nofollow"><span class="fa fa-volume-down"></span></a>
+							<a href="javascript:void(0);" id="WarfarePlay" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-pause"></span></a>
+							<a href="javascript:void(0);" id="WarfareVolUp" class="cbp-l-caption-buttonRight" rel="nofollow"><span class="fa fa-volume-up"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbp-l-grid-projects-title">Warfare</div>
+            <div class="cbp-l-grid-projects-desc">When you have warfare, things happen; people suffer; the noncombatants suffer as well as the combatants</div>
+        </div>
+		
+
+        
+
+    <div id="js-loadMore-juicy-projects" class="cbp-l-loadMore-button">
+        <a href="ajax-juicy-projects/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
+            <span class="cbp-l-loadMore-defaultText">LOAD MORE</span>
+            <span class="cbp-l-loadMore-loadingText">LOADING...</span>
+            <span class="cbp-l-loadMore-noMoreLoading">NO MORE WORKS</span>
+        </a>
+    </div>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+    
+
+    <!-- load jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Zetta JS -->
+  <script type="text/javascript" src="assets/js/zetta.menu.jquery.js"></script>
+  <script>
+    jQuery(".zetta-menu1").zettaMenu({"sticky":false,"showOn":"click"});
+  </script>
+  <!-- /Zetta JS -->
+
+    <!-- load cubeportfolio -->
+    <script type="text/javascript" src="js/jquery.cubeportfolio.min.js"></script>
+
+    <!-- init cubeportfolio -->
+    <script type="text/javascript" src="js/main.js"></script>
+	
+	<!-- load  howler audio library -->
+    <script type="text/javascript" src="js/howler.js"></script>
+	
+	<script>
+	//Hide all loader bars
+	$('#CreekProgressBar').hide();
+	$('#BeachProgressBar').hide();
+	$('#FireProgressBar').hide();
+	$('#ForestProgressBar').hide();
+	$('#ForestNightProgressBar').hide();
+	$('#FountainProgressBar').hide();
+	$('#RainProgressBar').hide();
+	$('#HeavyRainProgressBar').hide();
+	$('#ThunderProgressBar').hide();
+	$('#HowlingWindProgressBar').hide();
+	$('#AirportProgressBar').hide();
+	$('#BankProgressBar').hide();
+	$('#BaseballStadiumProgressBar').hide();
+	$('#BattleProgressBar').hide();
+	$('#CatPurrProgressBar').hide();
+	$('#CoffeeShopProgressBar').hide();
+	$('#ConstructionProgressBar').hide();
+	$('#DogProgressBar').hide();
+	$('#ElephantProgressBar').hide();
+	$('#HorrorMusic1ProgressBar').hide();
+	$('#HorrorMusic2ProgressBar').hide();
+	$('#HorrorMusic3ProgressBar').hide();
+	$('#Jazz1ProgressBar').hide();
+	$('#Jazz2ProgressBar').hide();
+	$('#Jazz3ProgressBar').hide();
+	$('#LionProgressBar').hide();
+	$('#MallProgressBar').hide();
+	$('#MoviesMusic1ProgressBar').hide();
+	$('#MoviesMusic2ProgressBar').hide();
+	$('#MoviesMusic3ProgressBar').hide();
+	$('#PeacefulMusicProgressBar').hide();
+	$('#RoadWorksProgressBar').hide();
+	$('#SoccerStadiumProgressBar').hide();
+	$('#StreetProgressBar').hide();
+	$('#TitanicMusicProgressBar').hide();
+	$('#Violin1ProgressBar').hide();
+	$('#Violin2ProgressBar').hide();
+	$('#Violin3ProgressBar').hide();
+	$('#Violin4ProgressBar').hide();
+	$('#WarfareProgressBar').hide();
+	
+	//Creating SOUNDS
+	var CreekSound = new Howl({src: ['music/Creek.mp3', 'music/Creek.wma', 'music/Creek.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var BeachSound = new Howl({src: ['music/Beach.mp3', 'music/Beach.wma', 'music/Beach.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var FireSound = new Howl({src: ['music/Fire.mp3', 'music/Fire.wma', 'music/Fire.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var ForestSound = new Howl({src: ['music/Forest.mp3', 'music/Forest.wma', 'music/Forest.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var ForestNightSound = new Howl({src: ['music/ForestNight.mp3', 'music/ForestNight.wma', 'music/ForestNight.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var FountainSound = new Howl({src: ['music/Fountain.mp3', 'music/Fountain.wma', 'music/Fountain.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var RainSound = new Howl({src: ['music/Rain.mp3', 'music/Rain.wma', 'music/Rain.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var HeavyRainSound = new Howl({src: ['music/RainHeavy.mp3', 'music/RainHeavy.wma', 'music/RainHeavy.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var ThunderSound = new Howl({src: ['music/Thunder.mp3', 'music/Thunder.wma', 'music/Thunder.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var HowlingWindSound = new Howl({src: ['music/HowlingWind.mp3', 'music/HowlingWind.wma', 'music/HowlingWind.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var AirportSound = new Howl({src: ['music/Airport.mp3', 'music/Airport.wma', 'music/Airport.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var BankSound = new Howl({src: ['music/Bank.mp3', 'music/Bank.wma', 'music/Bank.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var BaseballStadiumSound = new Howl({src: ['music/BaseballStadium.mp3', 'music/BaseballStadium.wma', 'music/BaseballStadium.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var BattleSound = new Howl({src: ['music/Battle.mp3', 'music/Battle.wma', 'music/Battle.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var CatPurrSound = new Howl({src: ['music/CatPurr.mp3', 'music/CatPurr.wma', 'music/CatPurr.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var CoffeeShopSound = new Howl({src: ['music/CoffeeShop.mp3', 'music/CoffeeShop.wma', 'music/CoffeeShop.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var ConstructionSound = new Howl({src: ['music/Construction.mp3', 'music/Construction.wma', 'music/Construction.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var DogSound = new Howl({src: ['music/Dog.mp3', 'music/Dog.wma', 'music/Dog.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var ElephantSound = new Howl({src: ['music/Elephant.mp3', 'music/Elephant.wma', 'music/Elephant.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var HorrorMusic1Sound = new Howl({src: ['music/HorrorMusic1.mp3', 'music/HorrorMusic1.wma', 'music/HorrorMusic1.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var HorrorMusic2Sound = new Howl({src: ['music/HorrorMusic2.mp3', 'music/HorrorMusic2.wma', 'music/HorrorMusic2.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var HorrorMusic3Sound = new Howl({src: ['music/HorrorMusic3.mp3', 'music/HorrorMusic3.wma', 'music/HorrorMusic3.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var Jazz1Sound = new Howl({src: ['music/Jazz1.mp3', 'music/Jazz1.wma', 'music/Jazz1.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var Jazz2Sound = new Howl({src: ['music/Jazz2.mp3', 'music/Jazz2.wma', 'music/Jazz2.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var Jazz3Sound = new Howl({src: ['music/Jazz3.mp3', 'music/Jazz3.wma', 'music/Jazz3.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var LionSound = new Howl({src: ['music/Lion.mp3', 'music/Lion.wma', 'music/Lion.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var MallSound = new Howl({src: ['music/Mall.mp3', 'music/Mall.wma', 'music/Mall.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var MoviesMusic1Sound = new Howl({src: ['music/MoviesMusic1.mp3', 'music/MoviesMusic1.wma', 'music/MoviesMusic1.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var MoviesMusic2Sound = new Howl({src: ['music/MoviesMusic2.mp3', 'music/MoviesMusic2.wma', 'music/MoviesMusic2.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var MoviesMusic3Sound = new Howl({src: ['music/MoviesMusic3.mp3', 'music/MoviesMusic3.wma', 'music/MoviesMusic3.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var PeacefulMusicSound = new Howl({src: ['music/PeacefulMusic.mp3', 'music/PeacefulMusic.wma', 'music/PeacefulMusic.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var RoadWorksSound = new Howl({src: ['music/RoadWorks.mp3', 'music/RoadWorks.wma', 'music/RoadWorks.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var SoccerStadiumSound = new Howl({src: ['music/SoccerStadium.mp3', 'music/SoccerStadium.wma', 'music/SoccerStadium.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var StreetSound = new Howl({src: ['music/Street.mp3', 'music/Street.wma', 'music/Street.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var TitanicMusicSound = new Howl({src: ['music/TitanicMusic.mp3', 'music/TitanicMusic.wma', 'music/TitanicMusic.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var Violin1Sound = new Howl({src: ['music/Violin1.mp3', 'music/Violin1.wma', 'music/Violin1.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var Violin2Sound = new Howl({src: ['music/Violin2.mp3', 'music/Violin2.wma', 'music/Violin2.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var Violin3Sound = new Howl({src: ['music/Violin3.mp3', 'music/Violin3.wma', 'music/Violin3.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var Violin4Sound = new Howl({src: ['music/Violin4.mp3', 'music/Violin4.wma', 'music/Violin4.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+	var WarfareSound = new Howl({src: ['music/Warfare.mp3', 'music/Warfare.wma', 'music/Warfare.ogg'], loop: true, preload: false, html5: true, volume: 0.2});
+
+	//Play Pause Rules for SOUNDS
+	var boolCreek=false;
+	var boolBeach=false;
+	var boolFire=false;
+	var boolForest=false;
+	var boolForestNight=false;
+	var boolFountain=false;
+	var boolRain=false;
+	var boolHeavyRain=false;
+	var boolThunder=false;
+	var boolHowlingWind=false;
+	var boolAirport=false;
+	var boolBank=false;
+	var boolBaseballStadium=false;
+	var boolBattle=false;
+	var boolCatPurr=false;
+	var boolCoffeeShop=false;
+	var boolConstruction=false;
+	var boolDog=false;
+	var boolElephant=false;
+	var boolHorrorMusic1=false;
+	var boolHorrorMusic2=false;
+	var boolHorrorMusic3=false;
+	var boolJazz1=false;
+	var boolJazz2=false;
+	var boolJazz3=false;
+	var boolLion=false;
+	var boolMall=false;
+	var boolMoviesMusic1=false;
+	var boolMoviesMusic2=false;
+	var boolMoviesMusic3=false;
+	var boolPeacefulMusic=false;
+	var boolRoadWorks=false;
+	var boolSoccerStadium=false;
+	var boolStreet=false;
+	var boolTitanicMusic=false;
+	var boolViolin1=false;
+	var boolViolin2=false;
+	var boolViolin3=false;
+	var boolViolin4=false;
+	var boolWarfare=false;
+	
+	//Creek
+	$("#CreekPlay").click(function () {
+	if (boolCreek==true){
+	//CreekSound.unload();
+	CreekSound.pause();
+	$('#Creek').removeClass('nowPlaying');
+	$('#CreekProgressBar').hide();
+	boolCreek=false;
+	}else{
+	CreekSound.load();
+	CreekSound.play();
+	$('#Creek').addClass('nowPlaying');
+	$('#CreekProgressBar').show();
+	boolCreek=true;
+	}
+	});
+	//Beach
+	$("#BeachPlay").click(function () {
+	if (boolBeach==true){
+	//BeachSound.unload();
+	BeachSound.pause();
+	$('#Beach').removeClass('nowPlaying');
+	$('#BeachProgressBar').hide();
+	boolBeach=false;
+	}else{
+	BeachSound.load();
+	BeachSound.play();
+	$('#Beach').addClass('nowPlaying');
+	$('#BeachProgressBar').show();
+	boolBeach=true;
+	}
+	});
+	//Fire
+	$("#FirePlay").click(function () {
+	if (boolFire==true){
+	//FireSound.unload();
+	FireSound.pause();
+	$('#Fire').removeClass('nowPlaying');
+	$('#FireProgressBar').hide();
+	boolFire=false;
+	}else{
+	FireSound.load();
+	FireSound.play();
+	$('#Fire').addClass('nowPlaying');
+	$('#FireProgressBar').show();
+	boolFire=true;
+	}
+	});
+	//Forest
+	$("#ForestPlay").click(function () {
+	if (boolForest==true){
+	//ForestSound.unload();
+	ForestSound.pause();
+	$('#Forest').removeClass('nowPlaying');
+	$('#ForestProgressBar').hide();
+	boolForest=false;
+	}else{
+	ForestSound.load();
+	ForestSound.play();
+	$('#Forest').addClass('nowPlaying');
+	$('#ForestProgressBar').show();
+	boolForest=true;
+	}
+	});
+	//ForestNight
+	$("#ForestNightPlay").click(function () {
+	if (boolForestNight==true){
+	//ForestNightSound.unload();
+	ForestNightSound.pause();
+	$('#ForestNight').removeClass('nowPlaying');
+	$('#ForestNightProgressBar').hide();
+	boolForestNight=false;
+	}else{
+	ForestNightSound.load();
+	ForestNightSound.play();
+	$('#ForestNight').addClass('nowPlaying');
+	$('#ForestNightProgressBar').show();
+	boolForestNight=true;
+	}
+	});
+	//Fountain
+	$("#FountainPlay").click(function () {
+	if (boolFountain==true){
+	//FountainSound.unload();
+	FountainSound.pause();
+	$('#Fountain').removeClass('nowPlaying');
+	$('#FountainProgressBar').hide();
+	boolFountain=false;
+	}else{
+	FountainSound.load();
+	FountainSound.play();
+	$('#Fountain').addClass('nowPlaying');
+	$('#FountainProgressBar').show();
+	boolFountain=true;
+	}
+	});
+	//Rain
+	$("#RainPlay").click(function () {
+	if (boolRain==true){
+	//RainSound.unload();
+	RainSound.pause();
+	$('#Rain').removeClass('nowPlaying');
+	$('#RainProgressBar').hide();
+	boolRain=false;
+	}else{
+	RainSound.load();
+	RainSound.play();
+	$('#Rain').addClass('nowPlaying');
+	$('#RainProgressBar').show();
+	boolRain=true;
+	}
+	});
+	//HeavyRain
+	$("#HeavyRainPlay").click(function () {
+	if (boolHeavyRain==true){
+	//HeavyRainSound.unload();
+	HeavyRainSound.pause();
+	$('#HeavyRain').removeClass('nowPlaying');
+	$('#HeavyRainProgressBar').hide();
+	boolHeavyRain=false;
+	}else{
+	HeavyRainSound.load();
+	HeavyRainSound.play();
+	$('#HeavyRain').addClass('nowPlaying');
+	$('#HeavyRainProgressBar').show();
+	boolHeavyRain=true;
+	}
+	});
+	//Thunder
+	$("#ThunderPlay").click(function () {
+	if (boolThunder==true){
+	//ThunderSound.unload();
+	ThunderSound.pause();
+	$('#Thunder').removeClass('nowPlaying');
+	$('#ThunderProgressBar').hide();
+	boolThunder=false;
+	}else{
+	ThunderSound.load();
+	ThunderSound.play();
+	$('#Thunder').addClass('nowPlaying');
+	$('#ThunderProgressBar').show();
+	boolThunder=true;
+	}
+	});
+	//HowlingWind
+	$("#HowlingWindPlay").click(function () {
+	if (boolHowlingWind==true){
+	//HowlingWindSound.unload();
+	HowlingWindSound.pause();
+	$('#HowlingWind').removeClass('nowPlaying');
+	$('#HowlingWindProgressBar').hide();
+	boolHowlingWind=false;
+	}else{
+	HowlingWindSound.load();
+	HowlingWindSound.play();
+	$('#HowlingWind').addClass('nowPlaying');
+	$('#HowlingWindProgressBar').show();
+	boolHowlingWind=true;
+	}
+	});
+	//Airport
+	$("#AirportPlay").click(function () {
+	if (boolAirport==true){
+	//AirportSound.unload();
+	AirportSound.pause();
+	$('#Airport').removeClass('nowPlaying');
+	$('#AirportProgressBar').hide();
+	boolAirport=false;
+	}else{
+	AirportSound.load();
+	AirportSound.play();
+	$('#Airport').addClass('nowPlaying');
+	$('#AirportProgressBar').show();
+	boolAirport=true;
+	}
+	});
+	//Bank
+	$("#BankPlay").click(function () {
+	if (boolBank==true){
+	//BankSound.unload();
+	BankSound.pause();
+	$('#Bank').removeClass('nowPlaying');
+	$('#BankProgressBar').hide();
+	boolBank=false;
+	}else{
+	BankSound.load();
+	BankSound.play();
+	$('#Bank').addClass('nowPlaying');
+	$('#BankProgressBar').show();
+	boolBank=true;
+	}
+	});
+	//BaseballStadium
+	$("#BaseballStadiumPlay").click(function () {
+	if (boolBaseballStadium==true){
+	//BaseballStadiumSound.unload();
+	BaseballStadiumSound.pause();
+	$('#BaseballStadium').removeClass('nowPlaying');
+	$('#BaseballStadiumProgressBar').hide();
+	boolBaseballStadium=false;
+	}else{
+	BaseballStadiumSound.load();
+	BaseballStadiumSound.play();
+	$('#BaseballStadium').addClass('nowPlaying');
+	$('#BaseballStadiumProgressBar').show();
+	boolBaseballStadium=true;
+	}
+	});
+	//Battle
+	$("#BattlePlay").click(function () {
+	if (boolBattle==true){
+	//BattleSound.unload();
+	BattleSound.pause();
+	$('#Battle').removeClass('nowPlaying');
+	$('#BattleProgressBar').hide();
+	boolBattle=false;
+	}else{
+	BattleSound.load();
+	BattleSound.play();
+	$('#Battle').addClass('nowPlaying');
+	$('#BattleProgressBar').show();
+	boolBattle=true;
+	}
+	});
+	//CatPurr
+	$("#CatPurrPlay").click(function () {
+	if (boolCatPurr==true){
+	//CatPurrSound.unload();
+	CatPurrSound.pause();
+	$('#CatPurr').removeClass('nowPlaying');
+	$('#CatPurrProgressBar').hide();
+	boolCatPurr=false;
+	}else{
+	CatPurrSound.load();
+	CatPurrSound.play();
+	$('#CatPurr').addClass('nowPlaying');
+	$('#CatPurrProgressBar').show();
+	boolCatPurr=true;
+	}
+	});
+	//CoffeeShop
+	$("#CoffeeShopPlay").click(function () {
+	if (boolCoffeeShop==true){
+	//CoffeeShopSound.unload();
+	CoffeeShopSound.pause();
+	$('#CoffeeShop').removeClass('nowPlaying');
+	$('#CoffeeShopProgressBar').hide();
+	boolCoffeeShop=false;
+	}else{
+	CoffeeShopSound.load();
+	CoffeeShopSound.play();
+	$('#CoffeeShop').addClass('nowPlaying');
+	$('#CoffeeShopProgressBar').show();
+	boolCoffeeShop=true;
+	}
+	});
+	//Construction
+	$("#ConstructionPlay").click(function () {
+	if (boolConstruction==true){
+	//ConstructionSound.unload();
+	ConstructionSound.pause();
+	$('#Construction').removeClass('nowPlaying');
+	$('#ConstructionProgressBar').hide();
+	boolConstruction=false;
+	}else{
+	ConstructionSound.load();
+	ConstructionSound.play();
+	$('#Construction').addClass('nowPlaying');
+	$('#ConstructionProgressBar').show();
+	boolConstruction=true;
+	}
+	});
+	//Dog
+	$("#DogPlay").click(function () {
+	if (boolDog==true){
+	//DogSound.unload();
+	DogSound.pause();
+	$('#Dog').removeClass('nowPlaying');
+	$('#DogProgressBar').hide();
+	boolDog=false;
+	}else{
+	DogSound.load();
+	DogSound.play();
+	$('#Dog').addClass('nowPlaying');
+	$('#DogProgressBar').show();
+	boolDog=true;
+	}
+	});
+	//Elephant
+	$("#ElephantPlay").click(function () {
+	if (boolElephant==true){
+	//ElephantSound.unload();
+	ElephantSound.pause();
+	$('#Elephant').removeClass('nowPlaying');
+	$('#ElephantProgressBar').hide();
+	boolElephant=false;
+	}else{
+	ElephantSound.load();
+	ElephantSound.play();
+	$('#Elephant').addClass('nowPlaying');
+	$('#ElephantProgressBar').show();
+	boolElephant=true;
+	}
+	});
+	//HorrorMusic1
+	$("#HorrorMusic1Play").click(function () {
+	if (boolHorrorMusic1==true){
+	//HorrorMusic1Sound.unload();
+	HorrorMusic1Sound.pause();
+	$('#HorrorMusic1').removeClass('nowPlaying');
+	$('#HorrorMusic1ProgressBar').hide();
+	boolHorrorMusic1=false;
+	}else{
+	HorrorMusic1Sound.load();
+	HorrorMusic1Sound.play();
+	$('#HorrorMusic1').addClass('nowPlaying');
+	$('#HorrorMusic1ProgressBar').show();
+	boolHorrorMusic1=true;
+	}
+	});
+	//HorrorMusic2
+	$("#HorrorMusic2Play").click(function () {
+	if (boolHorrorMusic2==true){
+	//HorrorMusic2Sound.unload();
+	HorrorMusic2Sound.pause();
+	$('#HorrorMusic2').removeClass('nowPlaying');
+	$('#HorrorMusic2ProgressBar').hide();
+	boolHorrorMusic2=false;
+	}else{
+	HorrorMusic2Sound.load();
+	HorrorMusic2Sound.play();
+	$('#HorrorMusic2').addClass('nowPlaying');
+	$('#HorrorMusic2ProgressBar').show();
+	boolHorrorMusic2=true;
+	}
+	});
+	//HorrorMusic3
+	$("#HorrorMusic3Play").click(function () {
+	if (boolHorrorMusic3==true){
+	//HorrorMusic3Sound.unload();
+	HorrorMusic3Sound.pause();
+	$('#HorrorMusic3').removeClass('nowPlaying');
+	$('#HorrorMusic3ProgressBar').hide();
+	boolHorrorMusic3=false;
+	}else{
+	HorrorMusic3Sound.load();
+	HorrorMusic3Sound.play();
+	$('#HorrorMusic3').addClass('nowPlaying');
+	$('#HorrorMusic3ProgressBar').show();
+	boolHorrorMusic3=true;
+	}
+	});
+	//Jazz1
+	$("#Jazz1Play").click(function () {
+	if (boolJazz1==true){
+	//Jazz1Sound.unload();
+	Jazz1Sound.pause();
+	$('#Jazz1').removeClass('nowPlaying');
+	$('#Jazz1ProgressBar').hide();
+	boolJazz1=false;
+	}else{
+	Jazz1Sound.load();
+	Jazz1Sound.play();
+	$('#Jazz1').addClass('nowPlaying');
+	$('#Jazz1ProgressBar').show();
+	boolJazz1=true;
+	}
+	});
+	//Jazz2
+	$("#Jazz2Play").click(function () {
+	if (boolJazz2==true){
+	//Jazz2Sound.unload();
+	Jazz2Sound.pause();
+	$('#Jazz2').removeClass('nowPlaying');
+	$('#Jazz2ProgressBar').hide();
+	boolJazz2=false;
+	}else{
+	Jazz2Sound.load();
+	Jazz2Sound.play();
+	$('#Jazz2').addClass('nowPlaying');
+	$('#Jazz2ProgressBar').show();
+	boolJazz2=true;
+	}
+	});
+	//Jazz3
+	$("#Jazz3Play").click(function () {
+	if (boolJazz3==true){
+	//Jazz3Sound.unload();
+	Jazz3Sound.pause();
+	$('#Jazz3').removeClass('nowPlaying');
+	$('#Jazz3ProgressBar').hide();
+	boolJazz3=false;
+	}else{
+	Jazz3Sound.load();
+	Jazz3Sound.play();
+	$('#Jazz3').addClass('nowPlaying');
+	$('#Jazz3ProgressBar').show();
+	boolJazz3=true;
+	}
+	});
+	//Lion
+	$("#LionPlay").click(function () {
+	if (boolLion==true){
+	//LionSound.unload();
+	LionSound.pause();
+	$('#Lion').removeClass('nowPlaying');
+	$('#LionProgressBar').hide();
+	boolLion=false;
+	}else{
+	LionSound.load();
+	LionSound.play();
+	$('#Lion').addClass('nowPlaying');
+	$('#LionProgressBar').show();
+	boolLion=true;
+	}
+	});
+	//Mall
+	$("#MallPlay").click(function () {
+	if (boolMall==true){
+	//MallSound.unload();
+	MallSound.pause();
+	$('#Mall').removeClass('nowPlaying');
+	$('#MallProgressBar').hide();
+	boolMall=false;
+	}else{
+	MallSound.load();
+	MallSound.play();
+	$('#Mall').addClass('nowPlaying');
+	$('#MallProgressBar').show();
+	boolMall=true;
+	}
+	});
+	//MoviesMusic1
+	$("#MoviesMusic1Play").click(function () {
+	if (boolMoviesMusic1==true){
+	//MoviesMusic1Sound.unload();
+	MoviesMusic1Sound.pause();
+	$('#MoviesMusic1').removeClass('nowPlaying');
+	$('#MoviesMusic1ProgressBar').hide();
+	boolMoviesMusic1=false;
+	}else{
+	MoviesMusic1Sound.load();
+	MoviesMusic1Sound.play();
+	$('#MoviesMusic1').addClass('nowPlaying');
+	$('#MoviesMusic1ProgressBar').show();
+	boolMoviesMusic1=true;
+	}
+	});
+	//MoviesMusic2
+	$("#MoviesMusic2Play").click(function () {
+	if (boolMoviesMusic2==true){
+	//MoviesMusic2Sound.unload();
+	MoviesMusic2Sound.pause();
+	$('#MoviesMusic2').removeClass('nowPlaying');
+	$('#MoviesMusic2ProgressBar').hide();
+	boolMoviesMusic2=false;
+	}else{
+	MoviesMusic2Sound.load();
+	MoviesMusic2Sound.play();
+	$('#MoviesMusic2').addClass('nowPlaying');
+	$('#MoviesMusic2ProgressBar').show();
+	boolMoviesMusic2=true;
+	}
+	});
+	//MoviesMusic3
+	$("#MoviesMusic3Play").click(function () {
+	if (boolMoviesMusic3==true){
+	//MoviesMusic3Sound.unload();
+	MoviesMusic3Sound.pause();
+	$('#MoviesMusic3').removeClass('nowPlaying');
+	$('#MoviesMusic3ProgressBar').hide();
+	boolMoviesMusic3=false;
+	}else{
+	MoviesMusic3Sound.load();
+	MoviesMusic3Sound.play();
+	$('#MoviesMusic3').addClass('nowPlaying');
+	$('#MoviesMusic3ProgressBar').show();
+	boolMoviesMusic3=true;
+	}
+	});
+	//PeacefulMusic
+	$("#PeacefulMusicPlay").click(function () {
+	if (boolPeacefulMusic==true){
+	//PeacefulMusicSound.unload();
+	PeacefulMusicSound.pause();
+	$('#PeacefulMusic').removeClass('nowPlaying');
+	$('#PeacefulMusicProgressBar').hide();
+	boolPeacefulMusic=false;
+	}else{
+	PeacefulMusicSound.load();
+	PeacefulMusicSound.play();
+	$('#PeacefulMusic').addClass('nowPlaying');
+	$('#PeacefulMusicProgressBar').show();
+	boolPeacefulMusic=true;
+	}
+	});
+	//RoadWorks
+	$("#RoadWorksPlay").click(function () {
+	if (boolRoadWorks==true){
+	//RoadWorksSound.unload();
+	RoadWorksSound.pause();
+	$('#RoadWorks').removeClass('nowPlaying');
+	$('#RoadWorksProgressBar').hide();
+	boolRoadWorks=false;
+	}else{
+	RoadWorksSound.load();
+	RoadWorksSound.play();
+	$('#RoadWorks').addClass('nowPlaying');
+	$('#RoadWorksProgressBar').show();
+	boolRoadWorks=true;
+	}
+	});
+	//SoccerStadium
+	$("#SoccerStadiumPlay").click(function () {
+	if (boolSoccerStadium==true){
+	//SoccerStadiumSound.unload();
+	SoccerStadiumSound.pause();
+	$('#SoccerStadium').removeClass('nowPlaying');
+	$('#SoccerStadiumProgressBar').hide();
+	boolSoccerStadium=false;
+	}else{
+	SoccerStadiumSound.load();
+	SoccerStadiumSound.play();
+	$('#SoccerStadium').addClass('nowPlaying');
+	$('#SoccerStadiumProgressBar').show();
+	boolSoccerStadium=true;
+	}
+	});
+	//Street
+	$("#StreetPlay").click(function () {
+	if (boolStreet==true){
+	//StreetSound.unload();
+	StreetSound.pause();
+	$('#Street').removeClass('nowPlaying');
+	$('#StreetProgressBar').hide();
+	boolStreet=false;
+	}else{
+	StreetSound.load();
+	StreetSound.play();
+	$('#Street').addClass('nowPlaying');
+	$('#StreetProgressBar').show();
+	boolStreet=true;
+	}
+	});
+	//TitanicMusic
+	$("#TitanicMusicPlay").click(function () {
+	if (boolTitanicMusic==true){
+	//TitanicMusicSound.unload();
+	TitanicMusicSound.pause();
+	$('#TitanicMusic').removeClass('nowPlaying');
+	$('#TitanicMusicProgressBar').hide();
+	boolTitanicMusic=false;
+	}else{
+	TitanicMusicSound.load();
+	TitanicMusicSound.play();
+	$('#TitanicMusic').addClass('nowPlaying');
+	$('#TitanicMusicProgressBar').show();
+	boolTitanicMusic=true;
+	}
+	});
+	//Violin1
+	$("#Violin1Play").click(function () {
+	if (boolViolin1==true){
+	//Violin1Sound.unload();
+	Violin1Sound.pause();
+	$('#Violin1').removeClass('nowPlaying');
+	$('#Violin1ProgressBar').hide();
+	boolViolin1=false;
+	}else{
+	Violin1Sound.load();
+	Violin1Sound.play();
+	$('#Violin1').addClass('nowPlaying');
+	$('#Violin1ProgressBar').show();
+	boolViolin1=true;
+	}
+	});
+	//Violin2
+	$("#Violin2Play").click(function () {
+	if (boolViolin2==true){
+	//Violin2Sound.unload();
+	Violin2Sound.pause();
+	$('#Violin2').removeClass('nowPlaying');
+	$('#Violin2ProgressBar').hide();
+	boolViolin2=false;
+	}else{
+	Violin2Sound.load();
+	Violin2Sound.play();
+	$('#Violin2').addClass('nowPlaying');
+	$('#Violin2ProgressBar').show();
+	boolViolin2=true;
+	}
+	});
+	//Violin3
+	$("#Violin3Play").click(function () {
+	if (boolViolin3==true){
+	//Violin3Sound.unload();
+	Violin3Sound.pause();
+	$('#Violin3').removeClass('nowPlaying');
+	$('#Violin3ProgressBar').hide();
+	boolViolin3=false;
+	}else{
+	Violin3Sound.load();
+	Violin3Sound.play();
+	$('#Violin3').addClass('nowPlaying');
+	$('#Violin3ProgressBar').show();
+	boolViolin3=true;
+	}
+	});
+	//Violin4
+	$("#Violin4Play").click(function () {
+	if (boolViolin4==true){
+	//Violin4Sound.unload();
+	Violin4Sound.pause();
+	$('#Violin4').removeClass('nowPlaying');
+	$('#Violin4ProgressBar').hide();
+	boolViolin4=false;
+	}else{
+	Violin4Sound.load();
+	Violin4Sound.play();
+	$('#Violin4').addClass('nowPlaying');
+	$('#Violin4ProgressBar').show();
+	boolViolin4=true;
+	}
+	});
+	//Warfare
+	$("#WarfarePlay").click(function () {
+	if (boolWarfare==true){
+	//WarfareSound.unload();
+	WarfareSound.pause();
+	$('#Warfare').removeClass('nowPlaying');
+	$('#WarfareProgressBar').hide();
+	boolWarfare=false;
+	}else{
+	WarfareSound.load();
+	WarfareSound.play();
+	$('#Warfare').addClass('nowPlaying');
+	$('#WarfareProgressBar').show();
+	boolWarfare=true;
+	}
+	});
+	
+	//Volume Controllers
+	//Creek + 
+	$('#CreekVolUp').click(function(){
+	CreekSound.volume(CreekSound.volume()+0.1);
+	$('#CreekProgress').css('width', (CreekSound.volume()*100)+'%');
+	});
+	//Creek - 
+	$('#CreekVolDown').click(function(){
+	CreekSound.volume(CreekSound.volume()-0.1);
+	$('#CreekProgress').css('width', (CreekSound.volume()*100)+'%');
+	});
+	
+	//Beach + 
+	$('#BeachVolUp').click(function(){
+	BeachSound.volume(BeachSound.volume()+0.1);
+	$('#BeachProgress').css('width', (BeachSound.volume()*100)+'%');
+	});
+	//Beach - 
+	$('#BeachVolDown').click(function(){
+	BeachSound.volume(BeachSound.volume()-0.1);
+	$('#BeachProgress').css('width', (BeachSound.volume()*100)+'%');
+	});
+	
+	//Fire + 
+	$('#FireVolUp').click(function(){
+	FireSound.volume(FireSound.volume()+0.1);
+	$('#FireProgress').css('width', (FireSound.volume()*100)+'%');
+	});
+	//Fire - 
+	$('#FireVolDown').click(function(){
+	FireSound.volume(FireSound.volume()-0.1);
+	$('#FireProgress').css('width', (FireSound.volume()*100)+'%');
+	});
+	
+	//Forest + 
+	$('#ForestVolUp').click(function(){
+	ForestSound.volume(ForestSound.volume()+0.1);
+	$('#ForestProgress').css('width', (ForestSound.volume()*100)+'%');
+	});
+	//Forest - 
+	$('#ForestVolDown').click(function(){
+	ForestSound.volume(ForestSound.volume()-0.1);
+	$('#ForestProgress').css('width', (ForestSound.volume()*100)+'%');
+	});
+	
+	//ForestNight + 
+	$('#ForestNightVolUp').click(function(){
+	ForestNightSound.volume(ForestNightSound.volume()+0.1);
+	$('#ForestNightProgress').css('width', (ForestNightSound.volume()*100)+'%');
+	});
+	//ForestNight - 
+	$('#ForestNightVolDown').click(function(){
+	ForestNightSound.volume(ForestNightSound.volume()-0.1);
+	$('#ForestNightProgress').css('width', (ForestNightSound.volume()*100)+'%');
+	});
+	
+	//Fountain + 
+	$('#FountainVolUp').click(function(){
+	FountainSound.volume(FountainSound.volume()+0.1);
+	$('#FountainProgress').css('width', (FountainSound.volume()*100)+'%');
+	});
+	//Fountain - 
+	$('#FountainVolDown').click(function(){
+	FountainSound.volume(FountainSound.volume()-0.1);
+	$('#FountainProgress').css('width', (FountainSound.volume()*100)+'%');
+	});
+	
+	//Rain + 
+	$('#RainVolUp').click(function(){
+	RainSound.volume(RainSound.volume()+0.1);
+	$('#RainProgress').css('width', (RainSound.volume()*100)+'%');
+	});
+	//Rain - 
+	$('#RainVolDown').click(function(){
+	RainSound.volume(RainSound.volume()-0.1);
+	$('#RainProgress').css('width', (RainSound.volume()*100)+'%');
+	});
+	
+	//HeavyRain + 
+	$('#HeavyRainVolUp').click(function(){
+	HeavyRainSound.volume(HeavyRainSound.volume()+0.1);
+	$('#HeavyRainProgress').css('width', (HeavyRainSound.volume()*100)+'%');
+	});
+	//HeavyRain - 
+	$('#HeavyRainVolDown').click(function(){
+	HeavyRainSound.volume(HeavyRainSound.volume()-0.1);
+	$('#HeavyRainProgress').css('width', (HeavyRainSound.volume()*100)+'%');
+	});
+	
+	//Thunder + 
+	$('#ThunderVolUp').click(function(){
+	ThunderSound.volume(ThunderSound.volume()+0.1);
+	$('#ThunderProgress').css('width', (ThunderSound.volume()*100)+'%');
+	});
+	//Thunder - 
+	$('#ThunderVolDown').click(function(){
+	ThunderSound.volume(ThunderSound.volume()-0.1);
+	$('#ThunderProgress').css('width', (ThunderSound.volume()*100)+'%');
+	});
+	
+	//HowlingWind + 
+	$('#HowlingWindVolUp').click(function(){
+	HowlingWindSound.volume(HowlingWindSound.volume()+0.1);
+	$('#HowlingWindProgress').css('width', (HowlingWindSound.volume()*100)+'%');
+	});
+	//HowlingWind - 
+	$('#HowlingWindVolDown').click(function(){
+	HowlingWindSound.volume(HowlingWindSound.volume()-0.1);
+	$('#HowlingWindProgress').css('width', (HowlingWindSound.volume()*100)+'%');
+	});
+	
+	//Airport + 
+	$('#AirportVolUp').click(function(){
+	AirportSound.volume(AirportSound.volume()+0.1);
+	$('#AirportProgress').css('width', (AirportSound.volume()*100)+'%');
+	});
+	//Airport - 
+	$('#AirportVolDown').click(function(){
+	AirportSound.volume(AirportSound.volume()-0.1);
+	$('#AirportProgress').css('width', (AirportSound.volume()*100)+'%');
+	});
+	
+	//Bank + 
+	$('#BankVolUp').click(function(){
+	BankSound.volume(BankSound.volume()+0.1);
+	$('#BankProgress').css('width', (BankSound.volume()*100)+'%');
+	});
+	//Bank - 
+	$('#BankVolDown').click(function(){
+	BankSound.volume(BankSound.volume()-0.1);
+	$('#BankProgress').css('width', (BankSound.volume()*100)+'%');
+	});
+	
+	//BaseballStadium + 
+	$('#BaseballStadiumVolUp').click(function(){
+	BaseballStadiumSound.volume(BaseballStadiumSound.volume()+0.1);
+	$('#BaseballStadiumProgress').css('width', (BaseballStadiumSound.volume()*100)+'%');
+	});
+	//BaseballStadium - 
+	$('#BaseballStadiumVolDown').click(function(){
+	BaseballStadiumSound.volume(BaseballStadiumSound.volume()-0.1);
+	$('#BaseballStadiumProgress').css('width', (BaseballStadiumSound.volume()*100)+'%');
+	});
+	
+	//Battle + 
+	$('#BattleVolUp').click(function(){
+	BattleSound.volume(BattleSound.volume()+0.1);
+	$('#BattleProgress').css('width', (BattleSound.volume()*100)+'%');
+	});
+	//Battle - 
+	$('#BattleVolDown').click(function(){
+	BattleSound.volume(BattleSound.volume()-0.1);
+	$('#BattleProgress').css('width', (BattleSound.volume()*100)+'%');
+	});
+	
+	//CatPurr + 
+	$('#CatPurrVolUp').click(function(){
+	CatPurrSound.volume(CatPurrSound.volume()+0.1);
+	$('#CatPurrProgress').css('width', (CatPurrSound.volume()*100)+'%');
+	});
+	//CatPurr - 
+	$('#CatPurrVolDown').click(function(){
+	CatPurrSound.volume(CatPurrSound.volume()-0.1);
+	$('#CatPurrProgress').css('width', (CatPurrSound.volume()*100)+'%');
+	});
+	
+	//CoffeeShop + 
+	$('#CoffeeShopVolUp').click(function(){
+	CoffeeShopSound.volume(CoffeeShopSound.volume()+0.1);
+	$('#CoffeeShopProgress').css('width', (CoffeeShopSound.volume()*100)+'%');
+	});
+	//CoffeeShop - 
+	$('#CoffeeShopVolDown').click(function(){
+	CoffeeShopSound.volume(CoffeeShopSound.volume()-0.1);
+	$('#CoffeeShopProgress').css('width', (CoffeeShopSound.volume()*100)+'%');
+	});
+	
+	//Construction + 
+	$('#ConstructionVolUp').click(function(){
+	ConstructionSound.volume(ConstructionSound.volume()+0.1);
+	$('#ConstructionProgress').css('width', (ConstructionSound.volume()*100)+'%');
+	});
+	//Construction - 
+	$('#ConstructionVolDown').click(function(){
+	ConstructionSound.volume(ConstructionSound.volume()-0.1);
+	$('#ConstructionProgress').css('width', (ConstructionSound.volume()*100)+'%');
+	});
+	
+	//Dog + 
+	$('#DogVolUp').click(function(){
+	DogSound.volume(DogSound.volume()+0.1);
+	$('#DogProgress').css('width', (DogSound.volume()*100)+'%');
+	});
+	//Dog - 
+	$('#DogVolDown').click(function(){
+	DogSound.volume(DogSound.volume()-0.1);
+	$('#DogProgress').css('width', (DogSound.volume()*100)+'%');
+	});
+	
+	//Elephant + 
+	$('#ElephantVolUp').click(function(){
+	ElephantSound.volume(ElephantSound.volume()+0.1);
+	$('#ElephantProgress').css('width', (ElephantSound.volume()*100)+'%');
+	});
+	//Elephant - 
+	$('#ElephantVolDown').click(function(){
+	ElephantSound.volume(ElephantSound.volume()-0.1);
+	$('#ElephantProgress').css('width', (ElephantSound.volume()*100)+'%');
+	});
+	
+	//HorrorMusic1 + 
+	$('#HorrorMusic1VolUp').click(function(){
+	HorrorMusic1Sound.volume(HorrorMusic1Sound.volume()+0.1);
+	$('#HorrorMusic1Progress').css('width', (HorrorMusic1Sound.volume()*100)+'%');
+	});
+	//HorrorMusic1 - 
+	$('#HorrorMusic1VolDown').click(function(){
+	HorrorMusic1Sound.volume(HorrorMusic1Sound.volume()-0.1);
+	$('#HorrorMusic1Progress').css('width', (HorrorMusic1Sound.volume()*100)+'%');
+	});
+	
+	//HorrorMusic2 + 
+	$('#HorrorMusic2VolUp').click(function(){
+	HorrorMusic2Sound.volume(HorrorMusic2Sound.volume()+0.1);
+	$('#HorrorMusic2Progress').css('width', (HorrorMusic2Sound.volume()*100)+'%');
+	});
+	//HorrorMusic2 - 
+	$('#HorrorMusic2VolDown').click(function(){
+	HorrorMusic2Sound.volume(HorrorMusic2Sound.volume()-0.1);
+	$('#HorrorMusic2Progress').css('width', (HorrorMusic2Sound.volume()*100)+'%');
+	});
+	
+	//HorrorMusic3 + 
+	$('#HorrorMusic3VolUp').click(function(){
+	HorrorMusic3Sound.volume(HorrorMusic3Sound.volume()+0.1);
+	$('#HorrorMusic3Progress').css('width', (HorrorMusic3Sound.volume()*100)+'%');
+	});
+	//HorrorMusic3 - 
+	$('#HorrorMusic3VolDown').click(function(){
+	HorrorMusic3Sound.volume(HorrorMusic3Sound.volume()-0.1);
+	$('#HorrorMusic3Progress').css('width', (HorrorMusic3Sound.volume()*100)+'%');
+	});
+	
+	//Jazz1 + 
+	$('#Jazz1VolUp').click(function(){
+	Jazz1Sound.volume(Jazz1Sound.volume()+0.1);
+	$('#Jazz1Progress').css('width', (Jazz1Sound.volume()*100)+'%');
+	});
+	//Jazz1 - 
+	$('#Jazz1VolDown').click(function(){
+	Jazz1Sound.volume(Jazz1Sound.volume()-0.1);
+	$('#Jazz1Progress').css('width', (Jazz1Sound.volume()*100)+'%');
+	});
+	
+	//Jazz2 + 
+	$('#Jazz2VolUp').click(function(){
+	Jazz2Sound.volume(Jazz2Sound.volume()+0.1);
+	$('#Jazz2Progress').css('width', (Jazz2Sound.volume()*100)+'%');
+	});
+	//Jazz2 - 
+	$('#Jazz2VolDown').click(function(){
+	Jazz2Sound.volume(Jazz2Sound.volume()-0.1);
+	$('#Jazz2Progress').css('width', (Jazz2Sound.volume()*100)+'%');
+	});
+	
+	//Jazz3 + 
+	$('#Jazz3VolUp').click(function(){
+	Jazz3Sound.volume(Jazz3Sound.volume()+0.1);
+	$('#Jazz3Progress').css('width', (Jazz3Sound.volume()*100)+'%');
+	});
+	//Jazz3 - 
+	$('#Jazz3VolDown').click(function(){
+	Jazz3Sound.volume(Jazz3Sound.volume()-0.1);
+	$('#Jazz3Progress').css('width', (Jazz3Sound.volume()*100)+'%');
+	});
+	
+	//Lion + 
+	$('#LionVolUp').click(function(){
+	LionSound.volume(LionSound.volume()+0.1);
+	$('#LionProgress').css('width', (LionSound.volume()*100)+'%');
+	});
+	//Lion - 
+	$('#LionVolDown').click(function(){
+	LionSound.volume(LionSound.volume()-0.1);
+	$('#LionProgress').css('width', (LionSound.volume()*100)+'%');
+	});
+	
+	//Mall + 
+	$('#MallVolUp').click(function(){
+	MallSound.volume(MallSound.volume()+0.1);
+	$('#MallProgress').css('width', (MallSound.volume()*100)+'%');
+	});
+	//Mall - 
+	$('#MallVolDown').click(function(){
+	MallSound.volume(MallSound.volume()-0.1);
+	$('#MallProgress').css('width', (MallSound.volume()*100)+'%');
+	});
+	
+	//MoviesMusic1 + 
+	$('#MoviesMusic1VolUp').click(function(){
+	MoviesMusic1Sound.volume(MoviesMusic1Sound.volume()+0.1);
+	$('#MoviesMusic1Progress').css('width', (MoviesMusic1Sound.volume()*100)+'%');
+	});
+	//MoviesMusic1 - 
+	$('#MoviesMusic1VolDown').click(function(){
+	MoviesMusic1Sound.volume(MoviesMusic1Sound.volume()-0.1);
+	$('#MoviesMusic1Progress').css('width', (MoviesMusic1Sound.volume()*100)+'%');
+	});
+	
+	//MoviesMusic2 + 
+	$('#MoviesMusic2VolUp').click(function(){
+	MoviesMusic2Sound.volume(MoviesMusic2Sound.volume()+0.1);
+	$('#MoviesMusic2Progress').css('width', (MoviesMusic2Sound.volume()*100)+'%');
+	});
+	//MoviesMusic2 - 
+	$('#MoviesMusic2VolDown').click(function(){
+	MoviesMusic2Sound.volume(MoviesMusic2Sound.volume()-0.1);
+	$('#MoviesMusic2Progress').css('width', (MoviesMusic2Sound.volume()*100)+'%');
+	});
+	
+	//MoviesMusic3 + 
+	$('#MoviesMusic3VolUp').click(function(){
+	MoviesMusic3Sound.volume(MoviesMusic3Sound.volume()+0.1);
+	$('#MoviesMusic3Progress').css('width', (MoviesMusic3Sound.volume()*100)+'%');
+	});
+	//MoviesMusic3 - 
+	$('#MoviesMusic3VolDown').click(function(){
+	MoviesMusic3Sound.volume(MoviesMusic3Sound.volume()-0.1);
+	$('#MoviesMusic3Progress').css('width', (MoviesMusic3Sound.volume()*100)+'%');
+	});
+	
+	//PeacefulMusic + 
+	$('#PeacefulMusicVolUp').click(function(){
+	PeacefulMusicSound.volume(PeacefulMusicSound.volume()+0.1);
+	$('#PeacefulMusicProgress').css('width', (PeacefulMusicSound.volume()*100)+'%');
+	});
+	//PeacefulMusic - 
+	$('#PeacefulMusicVolDown').click(function(){
+	PeacefulMusicSound.volume(PeacefulMusicSound.volume()-0.1);
+	$('#PeacefulMusicProgress').css('width', (PeacefulMusicSound.volume()*100)+'%');
+	});
+	
+	//RoadWorks + 
+	$('#RoadWorksVolUp').click(function(){
+	RoadWorksSound.volume(RoadWorksSound.volume()+0.1);
+	$('#RoadWorksProgress').css('width', (RoadWorksSound.volume()*100)+'%');
+	});
+	//RoadWorks - 
+	$('#RoadWorksVolDown').click(function(){
+	RoadWorksSound.volume(RoadWorksSound.volume()-0.1);
+	$('#RoadWorksProgress').css('width', (RoadWorksSound.volume()*100)+'%');
+	});
+	
+	//SoccerStadium + 
+	$('#SoccerStadiumVolUp').click(function(){
+	SoccerStadiumSound.volume(SoccerStadiumSound.volume()+0.1);
+	$('#SoccerStadiumProgress').css('width', (SoccerStadiumSound.volume()*100)+'%');
+	});
+	//SoccerStadium - 
+	$('#SoccerStadiumVolDown').click(function(){
+	SoccerStadiumSound.volume(SoccerStadiumSound.volume()-0.1);
+	$('#SoccerStadiumProgress').css('width', (SoccerStadiumSound.volume()*100)+'%');
+	});
+	
+	//Street + 
+	$('#StreetVolUp').click(function(){
+	StreetSound.volume(StreetSound.volume()+0.1);
+	$('#StreetProgress').css('width', (StreetSound.volume()*100)+'%');
+	});
+	//Street - 
+	$('#StreetVolDown').click(function(){
+	StreetSound.volume(StreetSound.volume()-0.1);
+	$('#StreetProgress').css('width', (StreetSound.volume()*100)+'%');
+	});
+	
+	//TitanicMusic + 
+	$('#TitanicMusicVolUp').click(function(){
+	TitanicMusicSound.volume(TitanicMusicSound.volume()+0.1);
+	$('#TitanicMusicProgress').css('width', (TitanicMusicSound.volume()*100)+'%');
+	});
+	//TitanicMusic - 
+	$('#TitanicMusicVolDown').click(function(){
+	TitanicMusicSound.volume(TitanicMusicSound.volume()-0.1);
+	$('#TitanicMusicProgress').css('width', (TitanicMusicSound.volume()*100)+'%');
+	});
+	
+	//Violin1 + 
+	$('#Violin1VolUp').click(function(){
+	Violin1Sound.volume(Violin1Sound.volume()+0.1);
+	$('#Violin1Progress').css('width', (Violin1Sound.volume()*100)+'%');
+	});
+	//Violin1 - 
+	$('#Violin1VolDown').click(function(){
+	Violin1Sound.volume(Violin1Sound.volume()-0.1);
+	$('#Violin1Progress').css('width', (Violin1Sound.volume()*100)+'%');
+	});
+	
+	//Violin2 + 
+	$('#Violin2VolUp').click(function(){
+	Violin2Sound.volume(Violin2Sound.volume()+0.1);
+	$('#Violin2Progress').css('width', (Violin2Sound.volume()*100)+'%');
+	});
+	//Violin2 - 
+	$('#Violin2VolDown').click(function(){
+	Violin2Sound.volume(Violin2Sound.volume()-0.1);
+	$('#Violin2Progress').css('width', (Violin2Sound.volume()*100)+'%');
+	});
+	
+	//Violin3 + 
+	$('#Violin3VolUp').click(function(){
+	Violin3Sound.volume(Violin3Sound.volume()+0.1);
+	$('#Violin3Progress').css('width', (Violin3Sound.volume()*100)+'%');
+	});
+	//Violin3 - 
+	$('#Violin3VolDown').click(function(){
+	Violin3Sound.volume(Violin3Sound.volume()-0.1);
+	$('#Violin3Progress').css('width', (Violin3Sound.volume()*100)+'%');
+	});
+	
+	//Violin4 + 
+	$('#Violin4VolUp').click(function(){
+	Violin4Sound.volume(Violin4Sound.volume()+0.1);
+	$('#Violin4Progress').css('width', (Violin4Sound.volume()*100)+'%');
+	});
+	//Violin4 - 
+	$('#Violin4VolDown').click(function(){
+	Violin4Sound.volume(Violin4Sound.volume()-0.1);
+	$('#Violin4Progress').css('width', (Violin4Sound.volume()*100)+'%');
+	});
+	
+	//Warfare + 
+	$('#WarfareVolUp').click(function(){
+	WarfareSound.volume(WarfareSound.volume()+0.1);
+	$('#WarfareProgress').css('width', (WarfareSound.volume()*100)+'%');
+	});
+	//Warfare - 
+	$('#WarfareVolDown').click(function(){
+	WarfareSound.volume(WarfareSound.volume()-0.1);
+	$('#WarfareProgress').css('width', (WarfareSound.volume()*100)+'%');
+	});
+	
+	
+	//Menu Items Buttons
+	//Stop All Playing Button
+	function stopAll(){
+	if(boolCreek){$('#CreekPlay').click();}
+	if(boolBeach){$('#BeachPlay').click();}
+	if(boolFire){$('#FirePlay').click();}
+	if(boolForest){$('#ForestPlay').click();}
+	if(boolForestNight){$('#ForestNightPlay').click();}
+	if(boolFountain){$('#FountainPlay').click();}
+	if(boolRain){$('#RainPlay').click();}
+	if(boolHeavyRain){$('#HeavyRainPlay').click();}
+	if(boolThunder){$('#ThunderPlay').click();}
+	if(boolHowlingWind){$('#HowlingWindPlay').click();}
+	if(boolAirport){$('#AirportPlay').click();}
+	if(boolBank){$('#BankPlay').click();}
+	if(boolBaseballStadium){$('#BaseballStadiumPlay').click();}
+	if(boolBattle){$('#BattlePlay').click();}
+	if(boolCatPurr){$('#CatPurrPlay').click();}
+	if(boolCoffeeShop){$('#CoffeeShopPlay').click();}
+	if(boolConstruction){$('#ConstructionPlay').click();}
+	if(boolDog){$('#DogPlay').click();}
+	if(boolElephant){$('#ElephantPlay').click();}
+	if(boolHorrorMusic1){$('#HorrorMusic1Play').click();}
+	if(boolHorrorMusic2){$('#HorrorMusic2Play').click();}
+	if(boolHorrorMusic3){$('#HorrorMusic3Play').click();}
+	if(boolJazz1){$('#Jazz1Play').click();}
+	if(boolJazz2){$('#Jazz2Play').click();}
+	if(boolJazz3){$('#Jazz3Play').click();}
+	if(boolLion){$('#LionPlay').click();}
+	if(boolMall){$('#MallPlay').click();}
+	if(boolMoviesMusic1){$('#MoviesMusic1Play').click();}
+	if(boolMoviesMusic2){$('#MoviesMusic2Play').click();}
+	if(boolMoviesMusic3){$('#MoviesMusic3Play').click();}
+	if(boolPeacefulMusic){$('#PeacefulMusicPlay').click();}
+	if(boolRoadWorks){$('#RoadWorksPlay').click();}
+	if(boolSoccerStadium){$('#SoccerStadiumPlay').click();}
+	if(boolStreet){$('#StreetPlay').click();}
+	if(boolTitanicMusic){$('#TitanicMusicPlay').click();}
+	if(boolViolin1){$('#Violin1Play').click();}
+	if(boolViolin2){$('#Violin2Play').click();}
+	if(boolViolin3){$('#Violin3Play').click();}
+	if(boolViolin4){$('#Violin4Play').click();}
+	if(boolWarfare){$('#WarfarePlay').click();}
+	}
+	$('#StopAllPlaying').click(function(){
+	stopAll();
+	});
+	
+	//Playlists Buttons
+	//Just Nature
+	//Camping
+	$('#CampingPlaylist').click(function(){
+	stopAll()
+	$('#ForestNightPlay').click();
+	$('#FirePlay').click();
+	ForestNightSound.volume(1);
+	$('#ForestNightProgress').css('width', '100%');
+	FireSound.volume(0.2);
+	$('#FireProgress').css('width', '20%');
+	});
+	//Going Out
+	$('#GoingOutPlaylist').click(function(){
+	stopAll();
+	$('#ForestPlay').click();
+	$('#CreekPlay').click();
+	$('#DogPlay').click();
+	ForestSound.volume(1);
+	$('#ForestProgress').css('width', '100%');
+	CreekSound.volume(0.2);
+	$('#CreekProgress').css('width', '20%');
+	DogSound.volume(0.1);
+	$('#DogProgress').css('width', '10%');
+	});
+	//CatAtTheBeach
+	$('#CatAtTheBeachPlaylist').click(function(){
+	stopAll();
+	$('#BeachPlay').click();
+	$('#FirePlay').click();
+	$('#CatPurrPlay').click();
+	BeachSound.volume(0.4);
+	$('#BeachProgress').css('width', '40%');
+	FireSound.volume(0.1);
+	$('#FireProgress').css('width', '10%');
+	CatPurrSound.volume(0.4);
+	$('#CatPurrProgress').css('width', '40%');
+	});
+	//ThunderStorm
+	$('#ThunderStormPlaylist').click(function(){
+	stopAll()
+	$('#ThunderPlay').click();
+	$('#HowlingWindPlay').click();
+	ThunderSound.volume(1);
+	$('#ThunderProgress').css('width', '100%');
+	HowlingWindSound.volume(1);
+	$('#HowlingWindProgress').css('width', '100%');
+	});
+	//LockedInside
+	$('#LockedInsidePlaylist').click(function(){
+	stopAll()
+	$('#ThunderPlay').click();
+	$('#RainPlay').click();
+	$('#Violin4Play').click();
+	ThunderSound.volume(0.4);
+	$('#ThunderProgress').css('width', '40%');
+	RainSound.volume(0.2);
+	$('#RainProgress').css('width', '20%');
+	Violin4Sound.volume(0.4);
+	$('#Violin4Progress').css('width', '40%');
+	});
+	//LostAFriend
+	$('#LostAFriendPlaylist').click(function(){
+	stopAll()
+	$('#HowlingWindPlay').click();
+	$('#BattlePlay').click();
+	$('#Violin3Play').click();
+	HowlingWindSound.volume(0.3);
+	$('#HowlingWindProgress').css('width', '30%');
+	BattleSound.volume(0.2);
+	$('#BattleProgress').css('width', '20%');
+	Violin3Sound.volume(0.8);
+	$('#Violin3Progress').css('width', '80%');
+	});
+	</script>
+</body>
+</html>
